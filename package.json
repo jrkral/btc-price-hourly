@@ -1,0 +1,17 @@
+{
+  "name": "btc-hourly-price",
+  "version": "1.0.0",
+  "description": "A Twitter bot that posts the current price of Bitcoin",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "twitter-lite": "^0.14.0"
+  }
+}
