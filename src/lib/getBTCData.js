@@ -46,9 +46,9 @@ const extractBTCData = async DOM => {
 }
 
 const formatBTCData = data => {
-	fmtPrice = data.price.replace(/[^\d.-]/g, '')
-	fmtDlrChange = data.dlrChange.replace(/[^\d.-]/g, '')
-	fmtPercChange = data.percChange.replace(/[^\d.-]/g, '')
+	const fmtPrice = data.price.replace(/[^\d.-]/g, '')
+	const fmtDlrChange = data.dlrChange.replace(/[^\d.-]/g, '')
+	const fmtPercChange = data.percChange.replace(/[^\d.-]/g, '')
 
 	return {
 		price: parseFloat(fmtPrice),
