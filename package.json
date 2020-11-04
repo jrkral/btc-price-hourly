@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "A Twitter bot that posts the current price of Bitcoin",
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf ./.next && next build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "next": "^10.0.1",
     "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "twitter-lite": "^0.14.0"
   }
 }
