@@ -11,7 +11,7 @@ const getDOM = async url => {
 }
 
 // Pulls required data from cheerio DOM object
-const extractBTCData = async DOM => {
+const extractBitcoinData = async DOM => {
 	// Scrape data
 	const domData = []
 	DOM('#last_last')
@@ -45,7 +45,7 @@ const extractBTCData = async DOM => {
 	}
 }
 
-const formatBTCData = data => {
+const formatBitcoinData = data => {
 	const fmtPrice = data.price.replace(/[^\d.-]/g, '')
 	const fmtDlrChange = data.dlrChange.replace(/[^\d.-]/g, '')
 	const fmtPercChange = data.percChange.replace(/[^\d.-]/g, '')
@@ -57,11 +57,11 @@ const formatBTCData = data => {
 	}
 }
 
-const getBTCData = async () => {
+const getBitcoinData = async () => {
 	const btcDOM = await getDOM(BTC_URL)
-	const btcRaw = await extractBTCData(btcDOM)
-	const btcFormatted = formatBTCData(btcRaw)
+	const btcRaw = await extractBitcoinData(btcDOM)
+	const btcFormatted = formatBitcoinData(btcRaw)
 	return btcFormatted
 }
 
-export default getBTCData
+module.exports = getBitcoinData

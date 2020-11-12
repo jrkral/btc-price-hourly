@@ -1,6 +1,7 @@
 const Twitter = require('twitter-lite')
 const env = require('../config/env')
 
+
 const opts = {
 	subdomain: 'api', // "api" is the default (change for other subdomains)
 	version: '1.1', // version "1.1" is the default (change for other subdomains)
@@ -12,7 +13,7 @@ const opts = {
 
 const client = new Twitter(opts)
 
-const getTwitterClient = () => {
+const useTwitter = () => {
 	return new Promise(async (resolve, reject) => {
 		try {
 			const results = await client.get('account/verify_credentials')
@@ -26,4 +27,4 @@ const getTwitterClient = () => {
 	})
 }
 
-export default getTwitterClient
+module.exports = useTwitter
