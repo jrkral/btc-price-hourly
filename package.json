@@ -5,9 +5,9 @@
 	"private": "true",
 	"scripts": {
 		"start": "node src/index.js",
-		"cron-start": "sudo forever start src/index.js",
-		"cron-stop": "sudo forever stopall",
-		"cron-restart": "sudo forever restartall"
+		"cron-start": "forever start src/index.js",
+		"cron-stop": "forever stopall",
+		"cron-restart": "forever restartall"
 	},
 	"keywords": [],
 	"author": "",
